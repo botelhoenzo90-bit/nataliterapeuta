@@ -175,22 +175,22 @@ function Index() {
         </div>
       </section>
 
-      <section className="section process" id="processo">
+      <section className="section process situations-section" id="processo">
         <div className="container">
           <div className="section-heading center">
-            <span className="eyebrow">SEU CAMINHO DE CUIDADO</span>
-            <h2>Cuidado construído com diálogo, confiança e <em>respeito ao seu ritmo.</em></h2>
-            <p>O primeiro contato é uma oportunidade para apresentar suas dúvidas, conhecer as possibilidades de atendimento e entender qual abordagem faz sentido para você.</p>
+            <span className="eyebrow">ISSO ACONTECE COM VOCÊ?</span>
+            <h2>Você sente que está na hora de olhar com mais carinho para <em>o que está vivendo?</em></h2>
+            <p>Às vezes, alguns sentimentos e situações se repetem e fica difícil entender tudo sozinho. Você não precisa ter as respostas prontas para começar uma conversa.</p>
           </div>
-          <div className="steps">
+          <div className="steps situation-cards">
             {[
-              ["01","Primeiro contato","Você conta o que busca e conhece as modalidades de atendimento."],
-              ["02","Entendimento","Em conjunto, são conversadas suas necessidades e expectativas."],
-              ["03","Processo terapêutico","O acompanhamento é conduzido com cuidado e atenção à sua individualidade."],
-              ["04","Novos caminhos","Os encontros podem apoiar a reflexão e a construção de novas possibilidades no cotidiano."]
+              ["01","Pensamentos que não desaceleram","Você sente a mente cheia, pensa demais ou tem dificuldade para encontrar um momento de tranquilidade."],
+              ["02","Emoções difíceis de organizar","Ansiedade, insegurança ou tristeza aparecem e você nem sempre sabe como lidar com o que sente."],
+              ["03","Relações que trazem desgaste","Algumas situações e padrões nos relacionamentos se repetem e você gostaria de compreendê-los melhor."],
+              ["04","Vontade de se entender melhor","Você quer se conhecer, reconhecer suas necessidades e encontrar novas formas de lidar com os desafios."]
             ].map(([n,t,d]) => <article className="step" key={n}><div className="step-num">{n}</div><div><h3>{t}</h3><p>{d}</p></div></article>)}
           </div>
-          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero agendar uma conversa.")}>Agendar conversa <MessageCircle size={18}/></Button></div>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de conversar e consultar os horários disponíveis para atendimento.")}>Vamos conversar <MessageCircle size={18}/></Button></div>
         </div>
       </section>
 
@@ -254,6 +254,58 @@ function Index() {
             {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Abordagens integrativas","terapias integrativas e escuta terapêutica, Corpo e emoções: um olhar integrado e certificação internacional."],["Modalidades de atendimento","Atendimento online, presencial e domiciliar, conforme disponibilidade."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero agendar um atendimento com você.")}>Agendar meu atendimento <MessageCircle size={18}/></Button></div>
+        </div>
+      </section>
+
+      <section className="section reviews">
+        <div className="container reviews-container">
+          <div className="section-heading center"><span className="eyebrow">AVALIAÇÕES</span><h2>Acolhimento que faz parte de <em>cada encontro.</em></h2><p>Cada experiência é pessoal. O atendimento é conduzido com respeito, privacidade e atenção às necessidades apresentadas.</p></div>
+          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Estrelas decorativas de exemplo">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p className="review-quote">“{text}”</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>Experiência de atendimento</span></div></div></article>)}</div>)}</div></div>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conversar sobre um atendimento.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
+        </div>
+      </section>
+
+      <section className="section location">
+        <div className="container location-grid">
+          <figure className="location-map">
+            {clinicMapUrl ? <iframe title="Google Maps — clínica em atendimento online, presencial e domiciliar" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
+            
+          </figure>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO EM PORTO ALEGRE</span><h2>Encontre uma modalidade de cuidado que combine com <em>sua rotina.</em></h2><p>Natali realiza atendimentos online e consulta a disponibilidade para modalidades presencial e domiciliar em Porto Alegre e região. Entre em contato para confirmar o endereço, a área de atendimento e os horários.</p><div className="location-list location-cards">
+            <div className="location-card"><span className="location-card-icon"><MapPin size={21}/></span><strong>Atendimento presencial</strong><p>Consulte a disponibilidade e combine o local pelo WhatsApp.</p></div>
+            <div className="location-card"><span className="location-card-icon"><Video size={21}/></span><strong>Atendimento online</strong><p>Converse de onde estiver, com praticidade e privacidade.</p></div>
+            <div className="location-card"><span className="location-card-icon"><Clock3 size={21}/></span><strong>Agendamento</strong><p>Consulte os horários disponíveis e escolha o melhor para você.</p></div>
+          </div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e consultar as modalidades disponíveis.")}>Agendar atendimento <ArrowRight size={18}/></Button></div>
+        </div>
+      </section>
+
+      <section className="section faq" id="faq">
+        <div className="container faq-grid">
+          <div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Talvez a sua dúvida esteja <em>aqui.</em></h2><p>Se ainda não encontrou a resposta que procura, fale diretamente com a Natali.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e tirar algumas dúvidas.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
+          <div className="faq-list">{faq.map(([q,a],i)=><div className={`faq-item ${openFaq===i ? "open":""}`} key={q}><Button variant="sitePlain" size="site" aria-expanded={openFaq===i} onClick={() => setOpenFaq(openFaq===i ? null : i)}><span>{q}</span><ChevronDown size={18}/></Button>{openFaq===i && <p>{a}</p>}</div>)}</div>
+        </div>
+      </section>
+
+      <section className="final-cta">
+        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa e descubra o que faz sentido para <em>você.</em></h2><p>Envie uma mensagem para tirar dúvidas sobre abordagens, modalidades e agendamento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar meu primeiro atendimento.")}>Agendar atendimento com Natali <ArrowRight size={19}/></Button></div>
+      </section>
+
+      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Natali</div><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
+
+      <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
+    </main>
+  );
+}      <section className="section benefits situations-section">
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">VOCÊ NÃO PRECISA PASSAR POR TUDO SOZINHA</span>
+            <h2>Dar espaço ao que você sente também é uma forma de <em>cuidar de si.</em></h2>
+            <p>Um acompanhamento começa com uma conversa acolhedora, no seu ritmo e com respeito à sua história.</p>
+          </div>
+          <div className="benefit-grid">
+            {[["Ser ouvida sem julgamentos","Falar sobre o que está vivendo em um espaço de escuta e respeito."],["Compreender seus sentimentos","Olhar com mais atenção para emoções, experiências e padrões que se repetem."],["Encontrar possibilidades","Conversar sobre abordagens e caminhos que façam sentido para suas necessidades."],["Respeitar seu próprio ritmo","Construir o processo passo a passo, sem precisar ter todas as respostas agora."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
+          </div>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de conversar sobre um atendimento.")}>Agendar uma conversa <MessageCircle size={18}/></Button></div>
         </div>
       </section>
 
