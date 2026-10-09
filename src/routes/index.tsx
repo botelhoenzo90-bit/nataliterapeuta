@@ -74,7 +74,7 @@ export const Route = createFileRoute("/")({
             description: "Atendimento de terapias integrativas e escuta terapêutica presencial em atendimento online, presencial e domiciliar e online.",
             address: {
               "@type": "PostalAddress", streetAddress: "Consulte o endereço pelo WhatsApp",
-              addressLocality: "Porto Alegre", addressRegion: "PB",
+              addressLocality: "Brasil",
               postalCode: "Agendamento prévio", addressCountry: "BR",
             },
           },
@@ -132,7 +132,7 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <h1>Natali <em>da Guia</em></h1>
+            <h1>Natali</h1>
             <p className="hero-title">Psicanalista • Terapeuta Integrativa Emocional</p>
             <p className="hero-statement">Cuidar da mente é transformar a vida.</p>
             <p className="hero-lead">Acolhimento, escuta e cuidado para uma vida mais leve, consciente e com significado.</p>
@@ -226,7 +226,7 @@ function Index() {
       <section className="section video-section" id="video">
         <div className="container video-section-grid">
           <div className="video-copy">
-            <span className="eyebrow">CONHEÇA A IDALÉCIA</span>
+            <span className="eyebrow">CONHEÇA A NATALI</span>
             <h2>Conheça o trabalho de Natali e <em>o seu processo.</em></h2>
             <p>Em breve, este espaço poderá apresentar um vídeo de Natali explicando sua abordagem, os atendimentos e como o cuidado pode começar.</p>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de conhecer melhor o seu atendimento.")}>Quero conhecer o atendimento <ArrowRight size={18}/></Button>
@@ -252,7 +252,7 @@ function Index() {
         <div className="container about-grid">
           <figure className="about-image"><img src={portrait.url} alt="Imagem de apresentação da terapeuta Natali" loading="lazy"/></figure>
           <div className="about-copy">
-            <span className="eyebrow">SOBRE IDALÉCIA DA GUIA</span>
+            <span className="eyebrow">SOBRE A NATALI</span>
             <h2>Conhecimento, acolhimento e um olhar <em>individualizado.</em></h2>
             <p>Natali atua como psicanalista, terapeuta integrativa emocional, com terapias cognitivo-comportamentais e atendimento infantil TRG Kids.</p>
             <p>Seu trabalho integra escuta ativa, terapia de fala, terapias integrativas e massoterapia, buscando acolher as dores emocionais e físicas e aliviar o desconforto inicial do paciente.</p>
@@ -284,7 +284,7 @@ function Index() {
 
       <section className="section benefits">
         <div className="container">
-          <div className="section-heading center"><span className="eyebrow">POR QUE ESCOLHER A IDALÉCIA</span><h2>Um atendimento pensado para olhar para <em>você por inteiro.</em></h2><p>Experiência, acolhimento e acompanhamento individualizado para quem deseja compreender melhor o que está vivendo.</p></div>
+          <div className="section-heading center"><span className="eyebrow">POR QUE ESCOLHER A NATALI</span><h2>Um atendimento pensado para olhar para <em>você por inteiro.</em></h2><p>Experiência, acolhimento e acompanhamento individualizado para quem deseja compreender melhor o que está vivendo.</p></div>
           <div className="benefit-grid">
             {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Abordagens integrativas","terapias integrativas e escuta terapêutica, Terapia Integrativa e Emocional e certificação internacional."],["Modalidades de atendimento","Atendimento online, presencial e domiciliar, conforme disponibilidade."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
           </div>
@@ -321,7 +321,7 @@ function Index() {
         <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Você não precisa entender tudo agora para <em>dar o primeiro passo.</em></h2><p>Converse com Natali, conte o que você está sentindo e conheça as possibilidades de cuidado.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero dar o primeiro passo e conhecer a terapias integrativas e escuta terapêutica.")}>Quero conversar com Natali <ArrowRight size={19}/></Button></div>
       </section>
 
-      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Natali <span>da Guia</span></div><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
+      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Natali</div><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
 
       <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de saber mais sobre a terapias integrativas e escuta terapêutica.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
     </main>
