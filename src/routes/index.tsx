@@ -19,7 +19,7 @@ import {
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { clinicAddress, getClinicMapUrl } from "@/lib/clinic-location";
+
 import portrait from "@/assets/natali-retrato.png.asset.json";
 import office from "@/assets/natali-consultorio.png.asset.json";
 import clinic from "@/assets/clinica-fachada.png.asset.json";
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: shareUrl },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Natali, Terapeuta TRG" },
+      { property: "og:image:alt", content: "Natali, psicanalista e terapeuta integrativa emocional" },
       { name: "twitter:image", content: shareUrl },
     ],
     links: [{ rel: "canonical", href: siteUrl }],
@@ -86,7 +86,6 @@ export const Route = createFileRoute("/")({
 });
 
 const whatsapp = "https://wa.me/555198751059";
-const mapsBrowserKey = import.meta.env['VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY'];
 const clinicMapUrl = "";
 const clinicVideoUrl = "";
 
@@ -113,8 +112,8 @@ const reviews = [
 ];
 
 const faq = [
-  ["O que é a terapias integrativas e escuta terapêutica?", "Natali oferece psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais e TRG Kids. A abordagem é definida de forma individualizada."],
-  ["O atendimento pode ser online?", "Sim. Natali realiza atendimentos online, presencial e domiciliar, de acordo com a modalidade disponível para você."],
+  ["Quais abordagens Natali utiliza?", "Natali oferece psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais e TRG Kids. A abordagem é definida de forma individualizada."],
+  ["Quais modalidades de atendimento estão disponíveis?", "Natali atende online, presencialmente e em domicílio, conforme disponibilidade e região atendida."],
   ["Quanto tempo dura o atendimento?", "A duração e a frequência são conversadas diretamente com Natali, considerando a necessidade e a modalidade de atendimento."],
   ["Quais atendimentos estão disponíveis?", "Os atendimentos incluem psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais, TRG Kids, massoterapia e palestras de saúde emocional e desenvolvimento pessoal."],
   ["A terapia substitui acompanhamento médico?", "Não. A terapia não substitui avaliação ou tratamento médico quando eles forem necessários. Em situações de sofrimento intenso, procure também um profissional de saúde adequado."],
@@ -255,7 +254,7 @@ function Index() {
           <div className="about-copy">
             <span className="eyebrow">SOBRE IDALÉCIA DA GUIA</span>
             <h2>Conhecimento, acolhimento e um olhar <em>individualizado.</em></h2>
-            <p>Natali é Terapeuta TRG, com especialização complementar em Terapia Integrativa e Emocional e certificação internacional em cuidado emocional e integrativo.</p>
+            <p>Natali atua como psicanalista, terapeuta integrativa emocional, com terapias cognitivo-comportamentais e atendimento infantil TRG Kids.</p>
             <p>Seu trabalho integra escuta ativa, terapia de fala, terapias integrativas e massoterapia, buscando acolher as dores emocionais e físicas e aliviar o desconforto inicial do paciente.</p>
             <div className="about-points"><div><Check size={17}/> Atendimento individual</div><div><Check size={17}/> Online e presencial</div><div><Check size={17}/> Terapia Integrativa e Emocional</div></div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero agendar uma conversa.")}>Agendar conversa <MessageCircle size={18}/></Button>
@@ -305,9 +304,9 @@ function Index() {
         <div className="container location-grid">
           <figure className="location-map">
             {clinicMapUrl ? <iframe title="Google Maps — clínica em atendimento online, presencial e domiciliar" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
-            <figcaption>{clinicAddress.street}<br/>{"Online, presencial e domiciliar"}<br/>CEP: {clinicAddress.postalCode}</figcaption>
+            <figcaption>Atendimento online, presencial e domiciliar<br/>Agendamento prévio pelo WhatsApp</figcaption>
           </figure>
-          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Online, presencial ou domiciliar, <em>onde fizer sentido para você.</em></h2><p>Escolha a modalidade mais adequada para sua rotina. Para atendimento presencial, entre em contato para consultar disponibilidade e horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial</strong>{clinicAddress.street}<br/>{clinicAddress.city}<br/>CEP: {clinicAddress.postalCode}</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Natali os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Online, presencial ou domiciliar, <em>onde fizer sentido para você.</em></h2><p>Escolha a modalidade mais adequada para sua rotina. Para atendimento presencial, entre em contato para consultar disponibilidade e horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial e domiciliar</strong>Consulte disponibilidade e região atendida pelo WhatsApp.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Natali os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
         </div>
       </section>
 
@@ -322,7 +321,7 @@ function Index() {
         <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Você não precisa entender tudo agora para <em>dar o primeiro passo.</em></h2><p>Converse com Natali, conte o que você está sentindo e conheça as possibilidades de cuidado.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero dar o primeiro passo e conhecer a terapias integrativas e escuta terapêutica.")}>Quero conversar com Natali <ArrowRight size={19}/></Button></div>
       </section>
 
-      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Natali <span>da Guia</span></div><p>Terapeuta TRG<br/>Terapia Integrativa e Emocional</p></div><div><strong>Atendimento</strong><span>Online e presencial</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
+      <footer><div className="container footer-grid"><div><div className="brand footer-brand">Natali <span>da Guia</span></div><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
 
       <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de saber mais sobre a terapias integrativas e escuta terapêutica.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
     </main>
