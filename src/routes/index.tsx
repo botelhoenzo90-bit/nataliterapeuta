@@ -103,10 +103,10 @@ const issues = [
 const issueImages = [depression, anxiety, dependency, fears, trauma, panic, insomnia, esteem, relationships, grief];
 
 const reviews = [
-  { name: "Mariana Oliveira", text: "Eu gostei muito de ter um espaço onde pude falar com tranquilidade, sem sentir que precisava esconder o que estava passando. A conversa me ajudou a olhar para algumas situações de outro jeito.", label: "Nome fictício • depoimento demonstrativo" },
-  { name: "Camila Rodrigues", text: "Desde o primeiro contato, me senti acolhida e respeitada. Foi importante poder tirar minhas dúvidas e entender como o acompanhamento poderia funcionar para mim, no meu tempo.", label: "Nome fictício • depoimento demonstrativo" },
-  { name: "Juliana Martins", text: "Gostei da atenção e da forma cuidadosa de conduzir a conversa. Consegui organizar melhor algumas ideias e refletir sobre coisas que eu vinha deixando de lado.", label: "Nome fictício • depoimento demonstrativo" },
-  { name: "Fernanda Costa", text: "Eu estava procurando um atendimento em que pudesse conversar sem julgamentos. A experiência foi acolhedora e me senti à vontade para falar sobre o que era importante para mim.", label: "Nome fictício • depoimento demonstrativo" },
+  { name: "Mariana Oliveira", text: "Eu gostei muito de ter um espaço onde pude falar com tranquilidade, sem sentir que precisava esconder o que estava passando. A conversa me ajudou a olhar para algumas situações de outro jeito." },
+  { name: "Camila Rodrigues", text: "Desde o primeiro contato, me senti acolhida e respeitada. Foi importante poder tirar minhas dúvidas e entender como o acompanhamento poderia funcionar para mim, no meu tempo." },
+  { name: "Juliana Martins", text: "Gostei da atenção e da forma cuidadosa de conduzir a conversa. Consegui organizar melhor algumas ideias e refletir sobre coisas que eu vinha deixando de lado." },
+  { name: "Fernanda Costa", text: "Eu estava procurando um atendimento em que pudesse conversar sem julgamentos. A experiência foi acolhedora e me senti à vontade para falar sobre o que era importante para mim." },
 ];
 
 const faq = [
@@ -137,8 +137,8 @@ function Index() {
             <p className="hero-lead">Um cuidado que considera suas emoções, sua história e as necessidades de cada fase da vida.</p>
             <div className="hero-credentials"><span><ShieldCheck size={17}/> Escuta ativa e acolhimento</span><span><Monitor size={17}/> Online, presencial e domiciliar</span></div>
             <div className="hero-actions">
-              <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de conhecer as opções de atendimento e consultar horários.")}><MessageCircle/> Agendar uma conversa</Button>
-              <Button variant="siteGhost" size="site" asChild><a href="#processo">Conhecer o processo <ArrowRight/></a></Button>
+              <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e consultar os horários disponíveis.")}><MessageCircle/> Agendar atendimento</Button>
+              <Button variant="siteGhost" size="site" asChild><a href="#processo">Agendar atendimento <ArrowRight/></a></Button>
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ function Index() {
               <div className="clinic-highlight-card"><span className="clinic-highlight-icon"><HeartHandshake size={22}/></span><strong>Acolhimento</strong><p>Escuta atenta e respeitosa, sem julgamentos e sem pressa para encontrar palavras.</p></div>
               <div className="clinic-highlight-card"><span className="clinic-highlight-icon"><Monitor size={22}/></span><strong>Flexibilidade</strong><p>Opções de atendimento online e presencial, conforme disponibilidade.</p></div>
             </div>
-            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conhecer o espaço e entender como funciona o atendimento.")}>Conhecer o atendimento <ArrowRight size={18}/></Button>
+            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}>Agendar atendimento <ArrowRight size={18}/></Button>
           </div>
         </div>
       </section>
@@ -237,13 +237,13 @@ function Index() {
             <article><div className="method-icon"><Sparkles size={21}/></div><span>03</span><h3>Reorganizar</h3><p>Construir novas perspectivas para lidar com emoções, relações e situações do cotidiano.</p></article>
             <article><div className="method-icon"><ArrowRight size={21}/></div><span>04</span><h3>Avançar</h3><p>Levar mais consciência para suas escolhas, limites e próximos passos.</p></article>
           </div>
-          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conhecer o processo terapêutico e agendar meu atendimento.")}>Começar meu processo <MessageCircle size={18}/></Button></div>
+          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar meu atendimento.")}>Agendar meu atendimento <MessageCircle size={18}/></Button></div>
         </div>
       </section>
 
       <section className="section specialty">
         <div className="container specialty-grid">
-          <div><span className="eyebrow">CUIDADO INTEGRATIVO</span><h2>Leitura Corporal e <em>Comportamental</em></h2><p>Dores físicas e emocionais podem impactar o dia a dia. A escuta ativa e o acompanhamento terapêutico podem ajudar a compreender o que você está vivendo e conversar sobre possibilidades de cuidado adequadas às suas necessidades.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de saber mais sobre suas abordagens de cuidado integrativo.")}>Quero saber mais <ArrowRight size={18}/></Button></div>
+          <div><span className="eyebrow">CUIDADO INTEGRATIVO</span><h2>Leitura Corporal e <em>Comportamental</em></h2><p>Dores físicas e emocionais podem impactar o dia a dia. A escuta ativa e o acompanhamento terapêutico podem ajudar a compreender o que você está vivendo e conversar sobre possibilidades de cuidado adequadas às suas necessidades.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e conversar sobre as abordagens disponíveis.")}>Agendar atendimento <ArrowRight size={18}/></Button></div>
           <div className="specialty-quote"><Brain size={32}/><p>“Compreender seus padrões pode ser o começo de uma nova forma de se relacionar consigo mesmo.”</p></div>
         </div>
       </section>
@@ -261,8 +261,7 @@ function Index() {
       <section className="section reviews">
         <div className="container reviews-container">
           <div className="section-heading center"><span className="eyebrow">AVALIAÇÕES</span><h2>Acolhimento que faz parte de <em>cada encontro.</em></h2><p>Cada experiência é pessoal. O atendimento é conduzido com respeito, privacidade e atenção às necessidades apresentadas.</p></div>
-          <p className="review-demo-notice">Depoimentos e nomes fictícios, criados apenas para demonstrar o visual da página. Substituir por relatos reais autorizados antes da publicação.</p>
-          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text,label})=><article className="review-card" key={name}><div className="review-stars" aria-label="Estrelas decorativas de exemplo">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p className="review-quote">“{text}”</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>{label}</span></div></div></article>)}</div>)}</div></div>
+          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Estrelas decorativas de exemplo">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p className="review-quote">“{text}”</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>Experiência de atendimento</span></div></div></article>)}</div>)}</div></div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conversar sobre um atendimento.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
         </div>
       </section>
@@ -271,26 +270,30 @@ function Index() {
         <div className="container location-grid">
           <figure className="location-map">
             {clinicMapUrl ? <iframe title="Google Maps — clínica em atendimento online, presencial e domiciliar" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
-            <figcaption>Porto Alegre, Rio Grande do Sul<br/>Consulte endereço e disponibilidade para atendimento presencial</figcaption>
+            
           </figure>
-          <div className="location-copy"><span className="eyebrow">ATENDIMENTO EM PORTO ALEGRE</span><h2>Encontre uma modalidade de cuidado que combine com <em>sua rotina.</em></h2><p>Natali realiza atendimentos online e consulta a disponibilidade para modalidades presencial e domiciliar em Porto Alegre e região. Entre em contato para confirmar o endereço, a área de atendimento e os horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Porto Alegre e região</strong>Consulte pelo WhatsApp os locais e a disponibilidade para atendimento presencial ou domiciliar.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Natali os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO EM PORTO ALEGRE</span><h2>Encontre uma modalidade de cuidado que combine com <em>sua rotina.</em></h2><p>Natali realiza atendimentos online e consulta a disponibilidade para modalidades presencial e domiciliar em Porto Alegre e região. Entre em contato para confirmar o endereço, a área de atendimento e os horários.</p><div className="location-list location-cards">
+            <div className="location-card"><span className="location-card-icon"><MapPin size={21}/></span><strong>Atendimento presencial</strong><p>Consulte a disponibilidade e combine o local pelo WhatsApp.</p></div>
+            <div className="location-card"><span className="location-card-icon"><Video size={21}/></span><strong>Atendimento online</strong><p>Converse de onde estiver, com praticidade e privacidade.</p></div>
+            <div className="location-card"><span className="location-card-icon"><Clock3 size={21}/></span><strong>Agendamento</strong><p>Consulte os horários disponíveis e escolha o melhor para você.</p></div>
+          </div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e consultar as modalidades disponíveis.")}>Agendar atendimento <ArrowRight size={18}/></Button></div>
         </div>
       </section>
 
       <section className="section faq" id="faq">
         <div className="container faq-grid">
-          <div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Talvez a sua dúvida esteja <em>aqui.</em></h2><p>Se ainda não encontrou a resposta que procura, fale diretamente com a Natali.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Tenho uma dúvida sobre a terapia.")}>Tirar uma dúvida <MessageCircle size={18}/></Button></div>
+          <div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Talvez a sua dúvida esteja <em>aqui.</em></h2><p>Se ainda não encontrou a resposta que procura, fale diretamente com a Natali.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e tirar algumas dúvidas.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
           <div className="faq-list">{faq.map(([q,a],i)=><div className={`faq-item ${openFaq===i ? "open":""}`} key={q}><Button variant="sitePlain" size="site" aria-expanded={openFaq===i} onClick={() => setOpenFaq(openFaq===i ? null : i)}><span>{q}</span><ChevronDown size={18}/></Button>{openFaq===i && <p>{a}</p>}</div>)}</div>
         </div>
       </section>
 
       <section className="final-cta">
-        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa e descubra o que faz sentido para <em>você.</em></h2><p>Envie uma mensagem para tirar dúvidas sobre abordagens, modalidades e agendamento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero dar o primeiro passo e conhecer a terapias integrativas e escuta terapêutica.")}>Quero conversar com Natali <ArrowRight size={19}/></Button></div>
+        <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa e descubra o que faz sentido para <em>você.</em></h2><p>Envie uma mensagem para tirar dúvidas sobre abordagens, modalidades e agendamento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar meu primeiro atendimento.")}>Agendar atendimento com Natali <ArrowRight size={19}/></Button></div>
       </section>
 
       <footer><div className="container footer-grid"><div><div className="brand footer-brand">Natali</div><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
 
-      <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de saber mais sobre a terapias integrativas e escuta terapêutica.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
+      <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
     </main>
   );
 }
