@@ -207,7 +207,6 @@ function Index() {
             </div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conhecer o espaço e entender como funciona o atendimento.")}>Conhecer o atendimento <ArrowRight size={18}/></Button>
           </div>
-          <div className="care-note"><span>Escuta ativa</span><span>Respeito à sua história</span><span>Cuidado individualizado</span></div>
         </div>
       </section>
 
