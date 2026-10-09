@@ -127,7 +127,7 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <img className="natali-logo" src="/logo-natali.png" alt="Logomarca Natali — Psicanalista e Terapeuta" />
+            <img className="natali-logo" src="/Logo-natali.png.png" alt="Logomarca Natali — Psicanalista e Terapeuta" />
             <h1>Natali</h1>
             <p className="hero-title">Psicanalista • Terapeuta Integrativa Emocional</p>
             <p className="hero-statement">Seu bem-estar começa quando você encontra espaço para ser ouvida.</p>
