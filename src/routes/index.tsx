@@ -103,10 +103,10 @@ const issues = [
 const issueImages = [depression, anxiety, dependency, fears, trauma, panic, insomnia, esteem, relationships, grief];
 
 const reviews = [
-  { name: "Escuta acolhedora", text: "Um atendimento começa com a oportunidade de falar com calma sobre o que você está vivendo. A escuta respeitosa ajuda a organizar as ideias e entender quais possibilidades de cuidado podem fazer sentido para o seu momento." },
-  { name: "Cuidado individual", text: "Cada história tem suas particularidades, por isso as necessidades e expectativas devem ser conversadas com atenção. O primeiro contato permite conhecer as abordagens, esclarecer dúvidas e compreender como funciona o acompanhamento." },
-  { name: "Respeito ao ritmo", text: "Não existe uma única maneira de viver emoções ou enfrentar mudanças. Um espaço acolhedor permite conversar sem pressa, reconhecer sentimentos e considerar novos caminhos respeitando a história e o tempo de cada pessoa." },
-  { name: "Informação clara", text: "Antes de agendar, você pode conhecer as modalidades disponíveis, perguntar sobre as abordagens e entender os próximos passos. A comunicação transparente ajuda a decidir com mais tranquilidade qual atendimento deseja consultar." },
+  { name: "Paciente 01", text: "Um atendimento começa com a oportunidade de falar com calma sobre o que você está vivendo. A escuta respeitosa ajuda a organizar as ideias e entender quais possibilidades de cuidado podem fazer sentido para o seu momento." },
+  { name: "Paciente 02", text: "Cada história tem suas particularidades, por isso as necessidades e expectativas devem ser conversadas com atenção. O primeiro contato permite conhecer as abordagens, esclarecer dúvidas e compreender como funciona o acompanhamento." },
+  { name: "Paciente 03", text: "Não existe uma única maneira de viver emoções ou enfrentar mudanças. Um espaço acolhedor permite conversar sem pressa, reconhecer sentimentos e considerar novos caminhos respeitando a história e o tempo de cada pessoa." },
+  { name: "Paciente 04", text: "Antes de agendar, você pode conhecer as modalidades disponíveis, perguntar sobre as abordagens e entender os próximos passos. A comunicação transparente ajuda a decidir com mais tranquilidade qual atendimento deseja consultar." },
 ];
 
 const faq = [
@@ -167,7 +167,7 @@ function Index() {
           <div className="issue-window"><div className="issue-track">
             {[0, 1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>
               {issues.map(([title,text], i) => <article className="issue-card" key={title}>
-                <img className="issue-image" src={issueImages[i]?.url} alt={copy === 0 ? title : ""} loading="lazy"/>
+                <div className="issue-image-placeholder" aria-label="Imagens em breve"><span>Imagens em breve</span></div>
                 <div className="issue-body"><h3>{title}</h3><p>{text}</p></div>
               </article>)}
             </div>)}
