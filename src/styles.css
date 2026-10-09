@@ -173,3 +173,14 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 .location-card p{margin:0;color:#657267;font-size:12px;line-height:1.65}
 .location-map figcaption{display:none}
 @media(max-width:760px){.location-list.location-cards{grid-template-columns:1fr;gap:12px}.location-card{padding:18px}.location-card-icon{width:44px;height:44px}}
+
+
+/* Hero: botão principal único e centralizado */
+.site .hero-actions-centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.site .hero-actions-centered > * {
+  margin-inline: auto;
+}
