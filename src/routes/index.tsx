@@ -247,16 +247,6 @@ function Index() {
         </div>
       </section>
 
-      <section className="section benefits">
-        <div className="container">
-          <div className="section-heading center"><span className="eyebrow">O QUE VOCÊ PODE ENCONTRAR</span><h2>Um espaço de cuidado com <em>respeito à sua individualidade.</em></h2><p>Diálogo transparente, escuta atenta e orientação sobre as opções de atendimento disponíveis.</p></div>
-          <div className="benefit-grid">
-            {[["Escuta individualizada","Cada pessoa possui uma história, experiências e necessidades diferentes."],["Abordagens integrativas","terapias integrativas e escuta terapêutica, Corpo e emoções: um olhar integrado e certificação internacional."],["Modalidades de atendimento","Atendimento online, presencial e domiciliar, conforme disponibilidade."],["Ambiente acolhedor","Um espaço de respeito, privacidade e cuidado durante todo o processo."]].map(([t,d],i)=><article key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}
-          </div>
-          <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero agendar um atendimento com você.")}>Agendar meu atendimento <MessageCircle size={18}/></Button></div>
-        </div>
-      </section>
-
       <section className="section reviews">
         <div className="container reviews-container">
           <div className="section-heading center"><span className="eyebrow">AVALIAÇÕES</span><h2>Acolhimento que faz parte de <em>cada encontro.</em></h2><p>Cada experiência é pessoal. O atendimento é conduzido com respeito, privacidade e atenção às necessidades apresentadas.</p></div>
