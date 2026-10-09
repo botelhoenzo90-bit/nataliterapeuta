@@ -184,3 +184,11 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 .site .hero-actions-centered > * {
   margin-inline: auto;
 }
+
+
+/* Faixa de informações em looping contínuo, sem espaços vazios */
+.site .marquee { overflow: hidden; width: 100%; }
+.site .marquee .marquee-track { display: flex; width: max-content; gap: 0; animation: marquee-loop 32s linear infinite; will-change: transform; }
+.site .marquee .marquee-group { display: flex; align-items: center; gap: 26px; flex: 0 0 auto; padding-right: 26px; white-space: nowrap; }
+@keyframes marquee-loop { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .site .marquee .marquee-track { animation: none; } }
