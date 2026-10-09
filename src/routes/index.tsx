@@ -33,14 +33,14 @@ import grief from "@/assets/luto.png.asset.json";
 import sharePhoto from "@/assets/idalecia-compartilhar.jpg.asset.json";
 
 const siteUrl = "https://nataliterapeuta.lovable.app";
-const shareUrl = new URL(sharePhoto.url, siteUrl).href;
+const shareUrl = `${siteUrl}/Logo-natali.png.png`;
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Natali | Psicanálise, cuidado emocional e terapias integrativas" },
-      { name: "description", content: "Psicanálise, terapia integrativa emocional, TCC, TRG Kids e massoterapia. Atendimento online, presencial e domiciliar mediante agendamento." },
+      { name: "description", content: "Psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais e TRG Kids. Atendimento online, presencial e domiciliar mediante agendamento." },
       { property: "og:title", content: "Natali | Psicanálise, cuidado emocional e terapias integrativas" },
       { property: "og:description", content: "Conheça Natali, psicanalista e terapeuta integrativa emocional. Atendimento presencial no Centro de atendimento online, presencial e domiciliar e online, com escuta individualizada e acolhimento." },
       { name: "robots", content: "index, follow, max-image-preview:large" },
@@ -55,7 +55,11 @@ export const Route = createFileRoute("/")({
       { property: "og:image:alt", content: "Natali, psicanalista e terapeuta integrativa emocional" },
       { name: "twitter:image", content: shareUrl },
     ],
-    links: [{ rel: "canonical", href: siteUrl }],
+    links: [
+      { rel: "canonical", href: siteUrl },
+      { rel: "icon", type: "image/png", href: `${siteUrl}/Logo-natali.png.png` },
+      { rel: "apple-touch-icon", href: `${siteUrl}/Logo-natali.png.png` },
+    ],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
@@ -89,7 +93,6 @@ const issues = [
   ["Autoconhecimento", "Reflexão sobre sentimentos, escolhas, limites e relações."],
   ["Relações e família", "Compreender conflitos, comunicação e vínculos importantes."],
   ["Cuidado infantil", "Atendimento infantil TRG Kids, conforme avaliação e adequação."],
-  ["Bem-estar corporal", "Massoterapia como opção de cuidado corporal, conforme necessidade."],
   ["Mudanças de vida", "Apoio para refletir sobre desafios e fases de transição."],
   ["Terapia integrativa", "Possibilidades de cuidado conversadas de forma individualizada."],
   ["Escuta terapêutica", "Um espaço de conversa com atenção à sua experiência."],
@@ -110,7 +113,7 @@ const faq = [
   ["Quais abordagens Natali utiliza?", "Natali oferece psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais e TRG Kids. A abordagem é definida de forma individualizada."],
   ["Quais modalidades de atendimento estão disponíveis?", "Natali atende online, presencialmente e em domicílio, conforme disponibilidade e região atendida."],
   ["Quanto tempo dura o atendimento?", "A duração e a frequência são conversadas diretamente com Natali, considerando a necessidade e a modalidade de atendimento."],
-  ["Quais atendimentos estão disponíveis?", "Os atendimentos incluem psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais, TRG Kids, massoterapia e palestras de saúde emocional e desenvolvimento pessoal."],
+  ["Quais atendimentos estão disponíveis?", "Os atendimentos incluem psicanálise, terapia integrativa emocional, terapias cognitivo-comportamentais, TRG Kids e palestras de saúde emocional e desenvolvimento pessoal."],
   ["A terapia substitui acompanhamento médico?", "Não. A terapia não substitui avaliação ou tratamento médico quando eles forem necessários. Em situações de sofrimento intenso, procure também um profissional de saúde adequado."],
   ["Como começo?", "Clique em um dos botões de agendamento e envie uma mensagem. Você poderá tirar suas dúvidas e verificar a modalidade de atendimento mais adequada."],
 ];
@@ -240,7 +243,7 @@ function Index() {
 
       <section className="section specialty">
         <div className="container specialty-grid">
-          <div><span className="eyebrow">CUIDADO INTEGRATIVO</span><h2>Leitura Corporal e <em>Comportamental</em></h2><p>Dores físicas e emocionais podem impactar o dia a dia. A escuta ativa, o acompanhamento terapêutico e a massoterapia podem fazer parte de estratégias de cuidado distintas, respeitando as necessidades e os limites de cada pessoa.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero saber mais sobre a Corpo e emoções: um olhar integrado.")}>Quero saber mais <ArrowRight size={18}/></Button></div>
+          <div><span className="eyebrow">CUIDADO INTEGRATIVO</span><h2>Leitura Corporal e <em>Comportamental</em></h2><p>Dores físicas e emocionais podem impactar o dia a dia. A escuta ativa e o acompanhamento terapêutico podem ajudar a compreender o que você está vivendo e conversar sobre possibilidades de cuidado adequadas às suas necessidades.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de saber mais sobre suas abordagens de cuidado integrativo.")}>Quero saber mais <ArrowRight size={18}/></Button></div>
           <div className="specialty-quote"><Brain size={32}/><p>“Compreender seus padrões pode ser o começo de uma nova forma de se relacionar consigo mesmo.”</p></div>
         </div>
       </section>
