@@ -103,10 +103,10 @@ const issues = [
 const issueImages = [depression, anxiety, dependency, fears, trauma, panic, insomnia, esteem, relationships, grief];
 
 const reviews = [
-  { name: "Paciente 01", text: "Um atendimento começa com a oportunidade de falar com calma sobre o que você está vivendo. A escuta respeitosa ajuda a organizar as ideias e entender quais possibilidades de cuidado podem fazer sentido para o seu momento." },
-  { name: "Paciente 02", text: "Cada história tem suas particularidades, por isso as necessidades e expectativas devem ser conversadas com atenção. O primeiro contato permite conhecer as abordagens, esclarecer dúvidas e compreender como funciona o acompanhamento." },
-  { name: "Paciente 03", text: "Não existe uma única maneira de viver emoções ou enfrentar mudanças. Um espaço acolhedor permite conversar sem pressa, reconhecer sentimentos e considerar novos caminhos respeitando a história e o tempo de cada pessoa." },
-  { name: "Paciente 04", text: "Antes de agendar, você pode conhecer as modalidades disponíveis, perguntar sobre as abordagens e entender os próximos passos. A comunicação transparente ajuda a decidir com mais tranquilidade qual atendimento deseja consultar." },
+  { name: "Mariana Oliveira", text: "Eu gostei muito de ter um espaço onde pude falar com tranquilidade, sem sentir que precisava esconder o que estava passando. A conversa me ajudou a olhar para algumas situações de outro jeito.", label: "Nome fictício • depoimento demonstrativo" },
+  { name: "Camila Rodrigues", text: "Desde o primeiro contato, me senti acolhida e respeitada. Foi importante poder tirar minhas dúvidas e entender como o acompanhamento poderia funcionar para mim, no meu tempo.", label: "Nome fictício • depoimento demonstrativo" },
+  { name: "Juliana Martins", text: "Gostei da atenção e da forma cuidadosa de conduzir a conversa. Consegui organizar melhor algumas ideias e refletir sobre coisas que eu vinha deixando de lado.", label: "Nome fictício • depoimento demonstrativo" },
+  { name: "Fernanda Costa", text: "Eu estava procurando um atendimento em que pudesse conversar sem julgamentos. A experiência foi acolhedora e me senti à vontade para falar sobre o que era importante para mim.", label: "Nome fictício • depoimento demonstrativo" },
 ];
 
 const faq = [
@@ -204,9 +204,9 @@ function Index() {
             <p>A partir dessa conversa, vocês podem explorar as possibilidades de acompanhamento e entender qual modalidade combina melhor com suas necessidades. O cuidado é construído com respeito à sua individualidade, aos seus limites e ao seu tempo.</p>
             
             <div className="clinic-highlights">
-              <div><ShieldCheck size={18}/><span><strong>Privacidade</strong>Um atendimento reservado e individual.</span></div>
-              <div><HeartHandshake size={18}/><span><strong>Acolhimento</strong>Escuta respeitosa, sem julgamentos.</span></div>
-              <div><Monitor size={18}/><span><strong>Flexibilidade</strong>Opções presencial e online.</span></div>
+              <div className="clinic-highlight-card"><span className="clinic-highlight-icon"><ShieldCheck size={22}/></span><strong>Privacidade</strong><p>Um espaço individual, com respeito à sua história e discrição em cada conversa.</p></div>
+              <div className="clinic-highlight-card"><span className="clinic-highlight-icon"><HeartHandshake size={22}/></span><strong>Acolhimento</strong><p>Escuta atenta e respeitosa, sem julgamentos e sem pressa para encontrar palavras.</p></div>
+              <div className="clinic-highlight-card"><span className="clinic-highlight-icon"><Monitor size={22}/></span><strong>Flexibilidade</strong><p>Opções de atendimento online e presencial, conforme disponibilidade.</p></div>
             </div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conhecer o espaço e entender como funciona o atendimento.")}>Conhecer o atendimento <ArrowRight size={18}/></Button>
           </div>
@@ -216,12 +216,12 @@ function Index() {
 
       <section className="section about" id="sobre">
         <div className="container about-grid">
-          <div className="about-photo"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85" alt="Mulher em um ambiente tranquilo de conversa e acolhimento" loading="lazy"/><div className="about-photo-caption">Escuta • Cuidado • Presença</div></div>
+          <div className="about-photo about-photo-placeholder"><div className="about-placeholder-content"><UserRound size={44}/><strong>Imagem da Natali</strong><span>Em breve</span></div></div>
           <div className="about-copy">
-            <span className="eyebrow">ABORDAGEM INDIVIDUALIZADA</span>
-            <h2>Diferentes abordagens, com foco na pessoa e na sua <em>história.</em></h2>
-            <p>Natali atua como psicanalista, terapeuta integrativa emocional, com terapias cognitivo-comportamentais e atendimento infantil TRG Kids.</p>
-            <p>O atendimento parte da escuta ativa e da conversa para compreender as necessidades apresentadas. As possibilidades de cuidado são discutidas de forma individualizada, considerando corpo, emoções e contexto.</p>
+            <span className="eyebrow">QUEM É NATALI?</span>
+            <h2>Um cuidado que começa com <em>escuta, presença e acolhimento.</em></h2>
+            <p>Natali é psicanalista e terapeuta integrativa emocional. Seu trabalho reúne escuta individualizada e diferentes possibilidades de cuidado, incluindo terapias cognitivo-comportamentais e atendimento infantil TRG Kids.</p>
+            <p>Mais do que chegar com respostas prontas, você pode encontrar um espaço para conversar sobre sua história, compreender o que está vivendo e conhecer as abordagens disponíveis para o seu momento.</p>
             <div className="about-points"><div><Check size={17}/> Atendimento individual</div><div><Check size={17}/> Online e presencial</div><div><Check size={17}/> Corpo e emoções: um olhar integrado</div></div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero agendar uma conversa.")}>Agendar conversa <MessageCircle size={18}/></Button>
           </div>
@@ -261,7 +261,8 @@ function Index() {
       <section className="section reviews">
         <div className="container reviews-container">
           <div className="section-heading center"><span className="eyebrow">AVALIAÇÕES</span><h2>Acolhimento que faz parte de <em>cada encontro.</em></h2><p>Cada experiência é pessoal. O atendimento é conduzido com respeito, privacidade e atenção às necessidades apresentadas.</p></div>
-          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Cinco estrelas ilustrativas">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p>{text}</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>Informações sobre o atendimento</span></div></div></article>)}</div>)}</div></div>
+          <p className="review-demo-notice">Depoimentos e nomes fictícios, criados apenas para demonstrar o visual da página. Substituir por relatos reais autorizados antes da publicação.</p>
+          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text,label})=><article className="review-card" key={name}><div className="review-stars" aria-label="Estrelas decorativas de exemplo">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p className="review-quote">“{text}”</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>{label}</span></div></div></article>)}</div>)}</div></div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conversar sobre um atendimento.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
         </div>
       </section>
