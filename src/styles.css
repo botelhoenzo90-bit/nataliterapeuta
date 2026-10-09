@@ -155,3 +155,21 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 .review-quote{font-style:italic;color:#435348;line-height:1.8!important}
 .review-person-info>span{font-size:10px;line-height:1.4;color:#85796d}
 @media(max-width:700px){.clinic-highlights{grid-template-columns:1fr;gap:12px}.clinic-highlight-card{padding:18px}.clinic-highlight-icon{width:44px;height:44px}.about-photo-placeholder{min-height:300px}.about-placeholder-content strong{font-size:23px}}
+
+
+/* Correções de botões e cards de localização */
+.site button,.site a[role="button"],.site .site-button{box-sizing:border-box;max-width:100%;white-space:normal;line-height:1.3;overflow-wrap:anywhere}
+.site .site-button{position:relative;z-index:0;isolation:isolate;color:#fffdf7;background:#315b46;border-color:#315b46}
+.site .site-button svg{flex-shrink:0;position:relative;z-index:1}
+.site .site-button-gold{background:#315b46!important;border-color:#315b46!important;color:#fffdf7!important}
+.site .site-button-gold:hover,.site .site-button-gold:focus-visible{background:#244735!important;border-color:#244735!important;color:#fffdf7!important}
+.site .site-button-gold::before{z-index:0;pointer-events:none}
+.site .site-button-gold>*{position:relative;z-index:1}
+.location-list.location-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0 30px}
+.location-card{min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:22px 16px;border:1px solid #dce5d9;border-radius:20px;background:linear-gradient(160deg,#fffdf8,#f5f0e7);box-shadow:0 8px 22px rgba(49,91,70,.07);transition:transform .25s ease,box-shadow .25s ease}
+.location-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(49,91,70,.12)}
+.location-card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;background:#e6eee4;color:#315b46}
+.location-card strong{color:#315b46;font-size:14px;line-height:1.4}
+.location-card p{margin:0;color:#657267;font-size:12px;line-height:1.65}
+.location-map figcaption{display:none}
+@media(max-width:760px){.location-list.location-cards{grid-template-columns:1fr;gap:12px}.location-card{padding:18px}.location-card-icon{width:44px;height:44px}}
