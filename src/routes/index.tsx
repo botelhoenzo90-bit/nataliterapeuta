@@ -144,7 +144,7 @@ function Index() {
         </div>
       </section>
 
-      <div className="marquee"><div><span>PSICANÁLISE</span><i>✦</i><span>TERAPIA INTEGRATIVA</span><i>✦</i><span>TCC</span><i>✦</i><span>TRG KIDS</span><i>✦</i><span>MASSOTERAPIA</span><i>✦</i><span>ESCUTA ATIVA</span><i>✦</i><span>SAÚDE EMOCIONAL</span><i>✦</i><span>ATENDIMENTO ONLINE</span><i>✦</i><span>PSICANÁLISE</span><i>✦</i><span>TERAPIA INTEGRATIVA</span><i>✦</i><span>TCC</span><i>✦</i><span>TRG KIDS</span><i>✦</i><span>MASSOTERAPIA</span><i>✦</i></div></div>
+      <div className="marquee"><div><span>PSICANÁLISE</span><i>✦</i><span>TERAPIA INTEGRATIVA</span><i>✦</i><span>TCC</span><i>✦</i><span>TRG KIDS</span><i>✦</i><span>ESCUTA ATIVA</span><i>✦</i><span>SAÚDE EMOCIONAL</span><i>✦</i><span>ATENDIMENTO ONLINE</span><i>✦</i><span>PSICANÁLISE</span><i>✦</i><span>TERAPIA INTEGRATIVA</span><i>✦</i><span>TCC</span><i>✦</i><span>TRG KIDS</span><i>✦</i></div></div>
 
       <section className="section intro-section">
         <div className="container narrow center">
