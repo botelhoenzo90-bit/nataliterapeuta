@@ -81,7 +81,7 @@ export const Route = createFileRoute("/")({
 });
 
 const whatsapp = "https://wa.me/555198751059";
-const clinicMapUrl = "";
+const clinicMapUrl = "https://www.google.com/maps?q=Porto+Alegre,+RS,+Brasil&output=embed";
 const clinicVideoUrl = "";
 
 const issues = [
@@ -100,10 +100,10 @@ const issues = [
 const issueImages = [depression, anxiety, dependency, fears, trauma, panic, insomnia, esteem, relationships, grief];
 
 const reviews = [
-  { name: "Escuta acolhedora", text: "Um espaço construído para conversar com respeito, privacidade e atenção." },
-  { name: "Cuidado individual", text: "As possibilidades de atendimento são conversadas conforme cada necessidade." },
-  { name: "Respeito ao ritmo", text: "Cada pessoa tem uma história e merece ser recebida sem julgamentos." },
-  { name: "Informação clara", text: "Conheça as abordagens e tire suas dúvidas antes de agendar." },
+  { name: "Escuta acolhedora", text: "Um atendimento começa com a oportunidade de falar com calma sobre o que você está vivendo. A escuta respeitosa ajuda a organizar as ideias e entender quais possibilidades de cuidado podem fazer sentido para o seu momento." },
+  { name: "Cuidado individual", text: "Cada história tem suas particularidades, por isso as necessidades e expectativas devem ser conversadas com atenção. O primeiro contato permite conhecer as abordagens, esclarecer dúvidas e compreender como funciona o acompanhamento." },
+  { name: "Respeito ao ritmo", text: "Não existe uma única maneira de viver emoções ou enfrentar mudanças. Um espaço acolhedor permite conversar sem pressa, reconhecer sentimentos e considerar novos caminhos respeitando a história e o tempo de cada pessoa." },
+  { name: "Informação clara", text: "Antes de agendar, você pode conhecer as modalidades disponíveis, perguntar sobre as abordagens e entender os próximos passos. A comunicação transparente ajuda a decidir com mais tranquilidade qual atendimento deseja consultar." },
 ];
 
 const faq = [
@@ -195,10 +195,10 @@ function Index() {
       <section className="section clinic-story">
         <div className="container clinic-story-grid">
           <div className="clinic-copy">
-            <span className="eyebrow">CUIDADO FEITO COM PRESENÇA</span>
-            <h2>Um atendimento com escuta, presença e <em>acolhimento.</em></h2>
-            <p>O atendimento considera a pessoa por inteiro: corpo, emoções e contexto de vida. O primeiro passo é acolher, ouvir com atenção e compreender o que precisa de cuidado.</p>
-            <p>Os atendimentos podem acontecer online, presencialmente ou em domicílio, conforme disponibilidade e modalidade indicada.</p>
+            <span className="eyebrow">UM CUIDADO QUE RESPEITA SUA HISTÓRIA</span>
+            <h2>Um espaço para acolher o que você sente e olhar para si com <em>mais gentileza.</em></h2>
+            <p>Nem sempre conseguimos explicar tudo o que sentimos — e não é preciso chegar com respostas prontas. A proposta é oferecer uma escuta atenta, sem julgamentos, para que você possa falar sobre sua história, suas dúvidas e aquilo que está pesando neste momento.</p>
+            <p>A partir dessa conversa, vocês podem explorar as possibilidades de acompanhamento e entender qual modalidade combina melhor com suas necessidades. O cuidado é construído com respeito à sua individualidade, aos seus limites e ao seu tempo.</p>
             
             <div className="clinic-highlights">
               <div><ShieldCheck size={18}/><span><strong>Privacidade</strong>Um atendimento reservado e individual.</span></div>
@@ -212,34 +212,9 @@ function Index() {
       </section>
 
 
-      <section className="section video-section" id="video">
-        <div className="container video-section-grid">
-          <div className="video-copy">
-            <span className="eyebrow">UM CONVITE AO AUTOCUIDADO</span>
-            <h2>Informação e acolhimento para você conhecer <em>as possibilidades.</em></h2>
-            <p>Este espaço fica reservado para um vídeo de apresentação de Natali, com informações sobre as abordagens e as modalidades de atendimento.</p>
-            <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de conhecer melhor o seu atendimento.")}>Quero conhecer o atendimento <ArrowRight size={18}/></Button>
-          </div>
-          <div className="video-frame">
-            {clinicVideoUrl ? (
-              <video controls preload="metadata" playsInline src={clinicVideoUrl}>
-                <source src={clinicVideoUrl} />
-                Seu navegador não consegue reproduzir este vídeo.
-              </video>
-            ) : (
-              <div className="video-placeholder">
-                <div className="video-play"><Video size={30}/></div>
-                <strong>Seu vídeo será exibido aqui</strong>
-                <span>Espaço reservado para o vídeo de apresentação de Natali.</span>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
       <section className="section about" id="sobre">
         <div className="container about-grid">
-          <div className="about-visual" aria-hidden="true"><div className="about-visual-mark">N</div><span>Escuta • Cuidado • Presença</span></div>
+          <div className="about-photo"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85" alt="Mulher em um ambiente tranquilo de conversa e acolhimento" loading="lazy"/><div className="about-photo-caption">Escuta • Cuidado • Presença</div></div>
           <div className="about-copy">
             <span className="eyebrow">ABORDAGEM INDIVIDUALIZADA</span>
             <h2>Diferentes abordagens, com foco na pessoa e na sua <em>história.</em></h2>
@@ -284,7 +259,7 @@ function Index() {
       <section className="section reviews">
         <div className="container reviews-container">
           <div className="section-heading center"><span className="eyebrow">AVALIAÇÕES</span><h2>Acolhimento que faz parte de <em>cada encontro.</em></h2><p>Cada experiência é pessoal. O atendimento é conduzido com respeito, privacidade e atenção às necessidades apresentadas.</p></div>
-          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Cinco estrelas ilustrativas">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p>{text}</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>Paciente da clínica</span></div></div></article>)}</div>)}</div></div>
+          <div className="review-window"><div className="review-track">{[0,1].map(copy => <div className="conveyor-group" aria-hidden={copy === 1 ? true : undefined} key={copy}>{reviews.map(({name,text})=><article className="review-card" key={name}><div className="review-stars" aria-label="Cinco estrelas ilustrativas">{[0,1,2,3,4].map(star=><Star key={star} size={18}/>)}</div><p>{text}</p><div className="review-person"><div className="review-avatar"><UserRound size={24}/></div><div className="review-person-info"><h3>{name}</h3><span>Informações sobre o atendimento</span></div></div></article>)}</div>)}</div></div>
           <div className="center action"><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero conversar sobre um atendimento.")}>Agendar atendimento <MessageCircle size={18}/></Button></div>
         </div>
       </section>
@@ -293,9 +268,9 @@ function Index() {
         <div className="container location-grid">
           <figure className="location-map">
             {clinicMapUrl ? <iframe title="Google Maps — clínica em atendimento online, presencial e domiciliar" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
-            <figcaption>Atendimento online, presencial e domiciliar<br/>Agendamento prévio pelo WhatsApp</figcaption>
+            <figcaption>Porto Alegre, Rio Grande do Sul<br/>Consulte endereço e disponibilidade para atendimento presencial</figcaption>
           </figure>
-          <div className="location-copy"><span className="eyebrow">ATENDIMENTO</span><h2>Online, presencial ou domiciliar, <em>onde fizer sentido para você.</em></h2><p>Os atendimentos podem ser online, presenciais ou domiciliares. Consulte pelo WhatsApp a disponibilidade, os locais e os horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Presencial e domiciliar</strong>Consulte disponibilidade e região atendida pelo WhatsApp.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Natali os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO EM PORTO ALEGRE</span><h2>Encontre uma modalidade de cuidado que combine com <em>sua rotina.</em></h2><p>Natali realiza atendimentos online e consulta a disponibilidade para modalidades presencial e domiciliar em Porto Alegre e região. Entre em contato para confirmar o endereço, a área de atendimento e os horários.</p><div className="location-list"><div><MapPin size={18}/><span><strong>Porto Alegre e região</strong>Consulte pelo WhatsApp os locais e a disponibilidade para atendimento presencial ou domiciliar.</span></div><div><Video size={18}/><span><strong>Online</strong>Atendimento à distância, com praticidade e privacidade.</span></div><div><Clock3 size={18}/><span><strong>Horários</strong>Consulte diretamente com a Natali os horários disponíveis.</span></div></div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de consultar horários e modalidade de atendimento.")}>Consultar horários <ArrowRight size={18}/></Button></div>
         </div>
       </section>
 
