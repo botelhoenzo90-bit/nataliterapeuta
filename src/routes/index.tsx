@@ -136,9 +136,8 @@ function Index() {
             <p className="hero-statement">Seu bem-estar começa quando você encontra espaço para ser ouvida.</p>
             <p className="hero-lead">Um cuidado que considera suas emoções, sua história e as necessidades de cada fase da vida.</p>
             <div className="hero-credentials"><span><ShieldCheck size={17}/> Escuta ativa e acolhimento</span><span><Monitor size={17}/> Online, presencial e domiciliar</span></div>
-            <div className="hero-actions">
+            <div className="hero-actions hero-actions-centered">
               <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e consultar os horários disponíveis.")}><MessageCircle/> Agendar atendimento</Button>
-              <Button variant="siteGhost" size="site" asChild><a href="#processo">Agendar atendimento <ArrowRight/></a></Button>
             </div>
           </div>
         </div>
