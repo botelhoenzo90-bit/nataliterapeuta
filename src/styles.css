@@ -2,23 +2,23 @@
 @import "tw-animate-css";
 
 :root {
- --background: #fff8f7; --foreground: #493638;
- --primary: #bd827f; --primary-foreground: #fffaf7;
- --secondary: #f7e4e1; --secondary-foreground: var(--foreground);
- --muted: #fbedeb; --muted-foreground: #746467;
- --accent: #d8b56b; --accent-foreground: #493638;
- --border: #ead3d0; --input: var(--border); --ring: var(--primary);
- --paper: #fffdfc; --ink: var(--foreground); --sage: #d8b56b;
- --sage-dark: var(--primary); --soft: var(--muted); --warm: #fff0ed;
- --name-purple: var(--primary); --hero-light: var(--background); --review-star: #d3b370; --hero-surface: #f3d8d4; --hero-text: #493638; --hero-muted: #765b5d;
- --footer-surface: #68494b; --footer-text: #fff0ed;
+ --background: #fbf7ef; --foreground: #34433a;
+ --primary: #315b46; --primary-foreground: #fffdf7;
+ --secondary: #f2e7d8; --secondary-foreground: var(--foreground);
+ --muted: #f8e9e6; --muted-foreground: #6c716a;
+ --accent: #d8b56b; --accent-foreground: #34433a;
+ --border: #e4d9c8; --input: var(--border); --ring: var(--primary);
+ --paper: #fffdf8; --ink: var(--foreground); --sage: #d8b56b;
+ --sage-dark: var(--primary); --soft: var(--muted); --warm: #f3e8d9;
+ --name-purple: var(--primary); --hero-light: #f8e9e6; --review-star: #d8b56b; --hero-surface: #315b46; --hero-text: #fffdf7; --hero-muted: #e5d8bd;
+ --footer-surface: #294a39; --footer-text: #f8f0e5;
  --shadow-card: 0 6px 20px color-mix(in oklab,var(--foreground) 7%,transparent);
  --shadow-button: 0 6px 16px color-mix(in oklab,var(--primary) 18%,transparent);
  --hero-overlay: linear-gradient(90deg,var(--hero-surface) 0%, color-mix(in oklab,var(--hero-surface) 96%,transparent) 37%,color-mix(in oklab,var(--hero-surface) 40%,transparent) 63%,transparent 78%);
  --font-body: "Segoe UI", system-ui, sans-serif; --font-heading: Georgia, serif;
  --button-whatsapp: #147a3e; --button-whatsapp-hover: #0e6030;
- --button-gold: #d8b56b; --button-gold-hover: #c7a052; --button-gold-text: #493638;
- --button-brown: #a86f68; --button-brown-hover: #8f5954;
+ --button-gold: #315b46; --button-gold-hover: #244735; --button-gold-text: #fffdf7;
+ --button-brown: #315b46; --button-brown-hover: #244735;
  --button-shine: #fffaf7;
 }
 @theme inline {
@@ -101,3 +101,22 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
  .video-placeholder{padding:28px 20px}
  .video-placeholder strong{font-size:23px}
 }
+
+/* Identidade visual Natali: verde elegante, bege natural e rosa suave */
+.intro-section,.process,.clinic-story,.reviews,.faq{background:#fffdf8}
+.soft,.method-section,.benefits{background:#f3e8d9}
+.hero,.about{background:#f8e9e6}
+.marquee{background:#315b46;color:#fffdf7}
+.specialty,.final-cta{background:#315b46;color:#fffdf7}
+.site-button{background:#315b46;border-color:#315b46;color:#fffdf7;box-shadow:0 6px 16px rgba(49,91,70,.18)}
+.site-button:hover{background:#244735;border-color:#244735;color:#fffdf7}
+.site-button-light{background:#d8b56b;border-color:#d8b56b;color:#34433a}
+.site-button-light:hover{background:#c7a052;color:#34433a}
+.site-button-ghost{color:#315b46;border-color:#c8d4c8;background:transparent}
+.site-button-ghost:hover{background:#e8efe8}
+.care-note{width:100%;min-height:300px;border-radius:28px;background:linear-gradient(145deg,#e7efe7,#f4e6dc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:36px;border:1px solid #d8e0d5}
+.care-note span{font-family:var(--font-heading);font-size:24px;color:#315b46}
+.about-visual{min-height:380px;border-radius:28px;background:linear-gradient(145deg,#f2dedb,#f8eee5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;border:1px solid #ead3d0}
+.about-visual-mark{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;border:1px solid #d8b56b;color:#315b46;font-family:var(--font-heading);font-size:92px;font-style:italic;background:rgba(255,253,248,.65)}
+.about-visual>span{font-size:12px;letter-spacing:1.5px;color:#315b46;text-transform:uppercase}
+@media(max-width:700px){.care-note{min-height:230px}.care-note span{font-size:21px}.about-visual{min-height:260px}}
