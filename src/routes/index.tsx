@@ -20,8 +20,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
-import portrait from "@/assets/natali-retrato.png.asset.json";
-import office from "@/assets/natali-consultorio.png.asset.json";
+import portrait from "@/assets/idalecia-retrato.png.asset.json";
+import office from "@/assets/idalecia-consultorio.png.asset.json";
 import clinic from "@/assets/clinica-fachada.png.asset.json";
 import whatsappIcon from "@/assets/whatsapp.png.asset.json";
 import depression from "@/assets/depressao.webp.asset.json";
@@ -34,8 +34,7 @@ import insomnia from "@/assets/insonia.png.asset.json";
 import esteem from "@/assets/autoestima.png.asset.json";
 import relationships from "@/assets/relacionamentos.png.asset.json";
 import grief from "@/assets/luto.png.asset.json";
-import sharePhoto from "@/assets/natali-compartilhar.jpg.asset.json";
-import nataliVideo from "@/assets/natali-video.mp4.asset.json";
+import sharePhoto from "@/assets/idalecia-compartilhar.jpg.asset.json";
 
 const siteUrl = "https://nataliterapeuta.lovable.app";
 const shareUrl = new URL(sharePhoto.url, siteUrl).href;
