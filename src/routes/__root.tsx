@@ -14,7 +14,7 @@ export const Route=createRootRouteWithContext<{queryClient:QueryClient}>()({
   {charSet:"utf-8"},{name:"viewport",content:"width=device-width, initial-scale=1"},
   {name:"author",content:"Idalécia da Guia"},
   {property:"og:site_name",content:"Idalécia da Guia — Terapeuta TRG"}
- ],links:[{rel:"stylesheet",href:appCss},{rel:"icon",href:"/favicon.png",type:"image/png"}]}),
+ ],links:[{rel:"stylesheet",href:appCss},{rel:"icon",href:"/favicon.png?v=natali-logo",type:"image/png"}]}),
  shellComponent:RootShell,component:RootComponent,notFoundComponent:NotFoundComponent,errorComponent:ErrorComponent
 });
 function RootShell({children}:{children:ReactNode}){return <html lang="pt-BR"><head><HeadContent/></head><body>{children}<Scripts/></body></html>}

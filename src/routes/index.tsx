@@ -30,10 +30,11 @@ import insomnia from "@/assets/insonia.png.asset.json";
 import esteem from "@/assets/autoestima.png.asset.json";
 import relationships from "@/assets/relacionamentos.png.asset.json";
 import grief from "@/assets/luto.png.asset.json";
-import sharePhoto from "@/assets/idalecia-compartilhar.jpg.asset.json";
+import sharePhoto from "@/assets/natali-compartilhar.jpg.asset.json";
+import logo from "@/assets/logo-natali.png.asset.json";
 
 const siteUrl = "https://nataliterapeuta.lovable.app";
-const shareUrl = `${siteUrl}/Logo-natali.png.png`;
+const shareUrl = new URL(sharePhoto.url, siteUrl).href;
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -52,13 +53,12 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: shareUrl },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Natali, psicanalista e terapeuta integrativa emocional" },
+      { property: "og:image:alt", content: "Logomarca Natali — Psicanalista e Terapeuta" },
       { name: "twitter:image", content: shareUrl },
     ],
     links: [
       { rel: "canonical", href: siteUrl },
-      { rel: "icon", type: "image/png", href: `${siteUrl}/Logo-natali.png.png` },
-      { rel: "apple-touch-icon", href: `${siteUrl}/Logo-natali.png.png` },
+      { rel: "apple-touch-icon", href: logo.url },
     ],
     scripts: [{
       type: "application/ld+json",
@@ -130,7 +130,7 @@ function Index() {
       <section className="hero" id="inicio">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <img className="natali-logo" src="/Logo-natali.png.png" alt="Logomarca Natali — Psicanalista e Terapeuta" />
+            <img className="natali-logo" src={logo.url} alt="Logomarca Natali — Psicanalista e Terapeuta" />
             <h1>Natali</h1>
             <p className="hero-title">Psicanalista • Terapeuta Integrativa Emocional</p>
             <p className="hero-statement">Seu bem-estar começa quando você encontra espaço para ser ouvida.</p>
