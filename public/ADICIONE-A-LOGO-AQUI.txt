@@ -1,0 +1,8 @@
+INSTRUÇÕES — LOGOMARCA DA NATALI
+
+Coloque a imagem da logomarca nesta pasta com o nome exato: logo-natali.png
+
+Caminho final esperado: public/logo-natali.png
+
+O topo da primeira seção do site já está preparado para exibir a imagem acima do nome Natali.
+Prefira PNG em alta resolução, de preferência com fundo transparente.
