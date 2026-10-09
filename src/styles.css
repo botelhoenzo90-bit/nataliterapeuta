@@ -120,3 +120,8 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 .about-visual-mark{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;border:1px solid #d8b56b;color:#315b46;font-family:var(--font-heading);font-size:92px;font-style:italic;background:rgba(255,253,248,.65)}
 .about-visual>span{font-size:12px;letter-spacing:1.5px;color:#315b46;text-transform:uppercase}
 @media(max-width:700px){.care-note{min-height:230px}.care-note span{font-size:21px}.about-visual{min-height:260px}}
+
+
+/* Logomarca Natali no topo da primeira seção */
+.natali-logo{display:block;width:min(190px,48vw);max-height:160px;object-fit:contain;margin:0 auto 18px}
+@media(max-width:700px){.natali-logo{width:min(145px,42vw);max-height:125px;margin-bottom:14px}}
