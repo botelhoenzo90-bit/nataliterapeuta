@@ -84,7 +84,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const whatsapp = "https://wa.me/555198751059";
 const clinicMapUrl = "https://www.google.com/maps?q=Porto+Alegre,+RS,+Brasil&output=embed";
 const clinicVideoUrl = "";
 
@@ -118,12 +117,18 @@ const faq = [
   ["Como começo?", "Clique em um dos botões de agendamento e envie uma mensagem. Você poderá tirar suas dúvidas e verificar a modalidade de atendimento mais adequada."],
 ];
 
-function goWhatsapp(message: string) {
-  window.open(`${whatsapp}?text=${encodeURIComponent(message)}`, "_blank");
-}
-
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [whatsappChoice, setWhatsappChoice] = useState<{ message: string; numbers: string[] } | null>(null);
+
+  function goWhatsapp(message: string) {
+    const numbers = ["5551998722115", "5551996980381"];
+    for (let i = numbers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+    }
+    setWhatsappChoice({ message, numbers });
+  }
 
   return (
     <main className="site">
@@ -283,6 +288,27 @@ function Index() {
       <footer><div className="container footer-grid"><div><img className="natali-logo footer-logo" src={logo.url} alt="Logomarca Natali — Psicanalista e Terapeuta" /><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
 
       <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
+
+      {whatsappChoice && (
+        <div className="whatsapp-choice-backdrop" onClick={() => setWhatsappChoice(null)}>
+          <section className="whatsapp-choice-dialog" role="dialog" aria-modal="true" aria-labelledby="whatsapp-choice-title" onClick={(event) => event.stopPropagation()}>
+            <button className="whatsapp-choice-close" type="button" onClick={() => setWhatsappChoice(null)} aria-label="Fechar">×</button>
+            <span className="whatsapp-choice-icon"><MessageCircle size={24}/></span>
+            <h2 id="whatsapp-choice-title">Com quem você deseja falar?</h2>
+            <p>Escolha um dos contatos para continuar seu atendimento pelo WhatsApp.</p>
+            {whatsappChoice.numbers.map((number) => {
+              const label = number === "5551998722115" ? "(51) 99872-2115" : "(51) 99698-0381";
+              return (
+                <a className="whatsapp-choice-option" key={number} href={`https://wa.me/${number}?text=${encodeURIComponent(whatsappChoice.message)}`} target="_blank" rel="noreferrer" onClick={() => setWhatsappChoice(null)}>
+                  <img src={whatsappIcon.url} alt=""/>
+                  <span>WhatsApp<strong>{label}</strong></span>
+                  <ArrowRight size={18}/>
+                </a>
+              );
+            })}
+          </section>
+        </div>
+      )}
     </main>
   );
 }
