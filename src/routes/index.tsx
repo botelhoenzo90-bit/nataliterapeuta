@@ -181,6 +181,36 @@ function Index() {
         </div>
       </section>
 
+      <section className="therapeutic-community" id="espaco-terapeutico">
+        <div className="therapeutic-community-orbit therapeutic-community-orbit-one" aria-hidden="true"></div>
+        <div className="therapeutic-community-orbit therapeutic-community-orbit-two" aria-hidden="true"></div>
+        <div className="container therapeutic-community-inner">
+          <div className="therapeutic-community-art" aria-hidden="true">
+            <span className="community-spark community-spark-one">✦</span>
+            <span className="community-spark community-spark-two">✧</span>
+            <div className="community-heart"><HeartHandshake size={54} strokeWidth={1.35}/></div>
+            <span className="community-leaf community-leaf-one"></span>
+            <span className="community-leaf community-leaf-two"></span>
+          </div>
+          <div className="therapeutic-community-copy">
+            <span className="eyebrow">UM ESPAÇO DE ACOLHIMENTO E TROCA</span>
+            <h2>Você não precisa caminhar <em>sozinho(a).</em></h2>
+            <p className="therapeutic-community-lead">Conheça o Espaço Terapêutico: um grupo aberto no WhatsApp para quem deseja compartilhar reflexões, encontrar acolhimento e estar em contato com conteúdos sobre bem-estar emocional.</p>
+            <div className="therapeutic-community-points">
+              <span><Check size={17}/> Entrada gratuita e aberta a todos</span>
+              <span><HeartHandshake size={17}/> Um espaço de respeito e troca</span>
+              <span><Sparkles size={17}/> Reflexões para o dia a dia</span>
+            </div>
+            <a className="therapeutic-community-button" href="https://chat.whatsapp.com/Kfyvb0Bomh2DsaTgR89JoE?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noreferrer">
+              <img src={whatsappIcon.url} alt=""/>
+              Entrar no grupo do WhatsApp
+              <ArrowRight size={19}/>
+            </a>
+            <p className="therapeutic-community-note">Um convite para se conectar, refletir e compartilhar — no seu tempo.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="section process situations-section" id="processo">
         <div className="container">
           <div className="section-heading center">
