@@ -454,3 +454,34 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 @media (prefers-reduced-motion: reduce) {
   .site .therapeutic-community-button { transition: none; }
 }
+
+
+/* Espaço Terapêutico centralizado no desktop após remover a ilustração */
+@media (min-width: 761px) {
+  .site .therapeutic-community-inner {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+  }
+  .site .therapeutic-community-copy {
+    width: 100%;
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .site .therapeutic-community-copy .eyebrow,
+  .site .therapeutic-community-copy h2,
+  .site .therapeutic-community-copy > p {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .site .therapeutic-community-points {
+    width: fit-content;
+    max-width: 100%;
+    text-align: left;
+  }
+  .site .therapeutic-community-button { margin-inline: auto; }
+}
