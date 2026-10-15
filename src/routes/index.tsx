@@ -32,6 +32,7 @@ import relationships from "@/assets/relacionamentos.png.asset.json";
 import grief from "@/assets/luto.png.asset.json";
 import sharePhoto from "@/assets/natali-compartilhar.jpg.asset.json";
 import logo from "@/assets/logo-natali.png.asset.json";
+import aboutPhoto from "@/assets/natali-sobre.png.asset.json";
 
 const siteUrl = "https://nataliterapeuta.lovable.app";
 const shareUrl = new URL(sharePhoto.url, siteUrl).href;
@@ -220,7 +221,7 @@ function Index() {
 
       <section className="section about" id="sobre">
         <div className="container about-grid">
-          <div className="about-photo about-photo-placeholder"><div className="about-placeholder-content"><UserRound size={44}/><strong>Imagem da Natali</strong><span>Em breve</span></div></div>
+          <figure className="about-photo"><img src={aboutPhoto.url} alt="Natali, psicanalista e terapeuta integrativa emocional" loading="lazy" /></figure>
           <div className="about-copy">
             <span className="eyebrow">QUEM É NATALI?</span>
             <h2>Um cuidado que começa com <em>escuta, presença e acolhimento.</em></h2>
