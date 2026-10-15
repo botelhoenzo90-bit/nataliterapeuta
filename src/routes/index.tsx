@@ -126,7 +126,7 @@ function Index() {
     const numbers = ["5551998722115", "5551996980381"];
     for (let i = numbers.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+      [numbers[i], numbers[j]] = [numbers[j]!, numbers[i]!];
     }
     setWhatsappChoice({ message, numbers });
   }
