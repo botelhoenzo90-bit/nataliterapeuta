@@ -331,3 +331,126 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
     margin-inline: auto;
   }
 }
+
+
+/* Espaço Terapêutico — convite para o grupo aberto do WhatsApp */
+.site .therapeutic-community {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 104px) 0;
+  background: linear-gradient(125deg, #edf3e9 0%, #fbf7ef 48%, #f4e7df 100%);
+}
+.site .therapeutic-community-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(180px, .78fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 76px);
+  max-width: 1060px;
+}
+.site .therapeutic-community-copy { min-width: 0; }
+.site .therapeutic-community-copy h2 {
+  margin: 14px 0 18px;
+  color: #315b46;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+.site .therapeutic-community-copy h2 em { color: #b17d75; font-style: normal; }
+.site .therapeutic-community-lead {
+  max-width: 680px;
+  margin: 0 0 22px;
+  color: #5f6d61;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+.site .therapeutic-community-points {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 28px;
+}
+.site .therapeutic-community-points span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #405849;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.site .therapeutic-community-points svg { flex: 0 0 auto; color: #477657; }
+.site .therapeutic-community-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  max-width: 100%;
+  padding: 15px 22px;
+  border: 1px solid #24553a;
+  border-radius: 999px;
+  background: #286442;
+  color: #fffdf7;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(40, 100, 66, .2);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.site .therapeutic-community-button:hover {
+  transform: translateY(-2px);
+  background: #204f34;
+  box-shadow: 0 14px 28px rgba(40, 100, 66, .25);
+}
+.site .therapeutic-community-button img { width: 25px; height: 25px; object-fit: contain; flex: 0 0 auto; }
+.site .therapeutic-community-button svg { flex: 0 0 auto; }
+.site .therapeutic-community-note { margin: 15px 0 0; color: #7b8178; font-size: .85rem; line-height: 1.6; }
+.site .therapeutic-community-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  width: min(100%, 310px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(49, 91, 70, .12);
+  border-radius: 48% 52% 53% 47% / 45% 44% 56% 55%;
+  background: radial-gradient(circle at 35% 30%, #fffdf8 0, #f5e7df 48%, #dce9d9 100%);
+  box-shadow: inset 0 0 0 12px rgba(255,255,255,.3), 0 22px 55px rgba(49,91,70,.09);
+}
+.site .community-heart {
+  display: grid;
+  place-items: center;
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  background: rgba(255,253,248,.82);
+  color: #477657;
+  box-shadow: 0 10px 30px rgba(49,91,70,.12);
+}
+.site .community-spark { position: absolute; color: #b17d75; font-size: 2rem; }
+.site .community-spark-one { top: 17%; right: 20%; }
+.site .community-spark-two { bottom: 22%; left: 18%; font-size: 2.6rem; }
+.site .community-leaf { position: absolute; display: block; width: 50px; height: 25px; border-radius: 100% 0 100% 0; background: #9bb49a; opacity: .75; transform: rotate(-25deg); }
+.site .community-leaf-one { top: 24%; left: 17%; }
+.site .community-leaf-two { right: 15%; bottom: 24%; width: 38px; height: 20px; background: #c99d92; transform: rotate(35deg); }
+.site .therapeutic-community-orbit { position: absolute; z-index: -1; width: 280px; height: 280px; border: 1px solid rgba(49,91,70,.08); border-radius: 50%; }
+.site .therapeutic-community-orbit-one { top: -170px; right: -80px; }
+.site .therapeutic-community-orbit-two { bottom: -210px; left: -90px; width: 360px; height: 360px; }
+@media (max-width: 760px) {
+  .site .therapeutic-community { padding: 58px 0 64px; }
+  .site .therapeutic-community-inner { grid-template-columns: minmax(0,1fr); gap: 30px; }
+  .site .therapeutic-community-art { width: min(62vw, 230px); grid-row: 1; }
+  .site .community-heart { width: 100px; height: 100px; }
+  .site .community-heart svg { width: 44px; height: 44px; }
+  .site .therapeutic-community-copy { text-align: center; }
+  .site .therapeutic-community-copy .eyebrow { display: inline-block; }
+  .site .therapeutic-community-lead { margin-inline: auto; font-size: .98rem; }
+  .site .therapeutic-community-points { width: fit-content; max-width: 100%; margin-inline: auto; text-align: left; }
+  .site .therapeutic-community-button { width: 100%; gap: 9px; padding-inline: 14px; font-size: .92rem; }
+  .site .therapeutic-community-note { max-width: 360px; margin-inline: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site .therapeutic-community-button { transition: none; }
+}
