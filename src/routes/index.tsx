@@ -262,15 +262,11 @@ function Index() {
 
       <section className="section location">
         <div className="container location-grid">
-          <figure className="location-map">
-            {clinicMapUrl ? <iframe title="Google Maps — clínica em atendimento online, presencial e domiciliar" src={clinicMapUrl} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/> : <div className="location-map-pending"><MapPin size={36}/><p>Mapa temporariamente indisponível.</p></div>}
-            
-          </figure>
-          <div className="location-copy"><span className="eyebrow">ATENDIMENTO EM PORTO ALEGRE</span><h2>Encontre uma modalidade de cuidado que combine com <em>sua rotina.</em></h2><p>Natali realiza atendimentos online e consulta a disponibilidade para modalidades presencial e domiciliar em Porto Alegre e região. Entre em contato para confirmar o endereço, a área de atendimento e os horários.</p><div className="location-list location-cards">
-            <div className="location-card"><span className="location-card-icon"><MapPin size={21}/></span><strong>Atendimento presencial</strong><p>Consulte a disponibilidade e combine o local pelo WhatsApp.</p></div>
-            <div className="location-card"><span className="location-card-icon"><Video size={21}/></span><strong>Atendimento online</strong><p>Converse de onde estiver, com praticidade e privacidade.</p></div>
-            <div className="location-card"><span className="location-card-icon"><Clock3 size={21}/></span><strong>Agendamento</strong><p>Consulte os horários disponíveis e escolha o melhor para você.</p></div>
-          </div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento e consultar as modalidades disponíveis.")}>Agendar atendimento <ArrowRight size={18}/></Button></div>
+          <div className="location-copy"><span className="eyebrow">ATENDIMENTO ONLINE E DOMICILIAR</span><h2>Um cuidado que chega até você, onde for possível.</h2><p>No momento, os atendimentos online estão disponíveis para todo o Brasil. Para atendimento domiciliar, Natali atende Charqueadas, São Jerônimo e região, incluindo o interior, Arroio dos Ratos, Butiá e General Câmara.</p><div className="location-list location-cards">
+            <div className="location-card"><span className="location-card-icon"><Video size={21}/></span><strong>Atendimento online</strong><p>Atendimentos online para pessoas de todo o Brasil.</p></div>
+            <div className="location-card"><span className="location-card-icon"><MapPin size={21}/></span><strong>Atendimento domiciliar</strong><p>Charqueadas, São Jerônimo, interior da região, Arroio dos Ratos, Butiá e General Câmara.</p></div>
+            <div className="location-card"><span className="location-card-icon"><Clock3 size={21}/></span><strong>Agendamento prévio</strong><p>Consulte disponibilidade, horários e detalhes do atendimento pelo WhatsApp.</p></div>
+          </div><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de consultar a disponibilidade para atendimento online ou domiciliar.")}>Consultar atendimento <ArrowRight size={18}/></Button></div>
         </div>
       </section>
 
