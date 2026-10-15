@@ -425,6 +425,14 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 .site .therapeutic-community-button img { width: 25px; height: 25px; object-fit: contain; flex: 0 0 auto; }
 .site .therapeutic-community-button svg { flex: 0 0 auto; }
 .site .therapeutic-community-note { margin: 15px 0 0; color: #7b8178; font-size: .85rem; line-height: 1.6; }
+.site .emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+.site .therapeutic-community-copy h2 .emoji { font-size: .82em; margin-right: .1em; }
+
 .site .therapeutic-community-art {
   position: relative;
   display: grid;

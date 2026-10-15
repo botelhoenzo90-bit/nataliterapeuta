@@ -187,11 +187,11 @@ function Index() {
         <div className="container therapeutic-community-inner">
           <div className="therapeutic-community-copy">
             <span className="eyebrow">UM ESPAÇO DE ACOLHIMENTO E TROCA</span>
-            <h2>💚 Um espaço de acolhimento, <em>escuta e transformação.</em></h2>
+            <h2><span className="emoji" aria-hidden="true">💚</span> Um espaço de acolhimento, <em>escuta e transformação.</em></h2>
             <p className="therapeutic-community-lead">Você não precisa passar por tudo sozinho(a).</p>
             <p className="therapeutic-community-text">Criamos este grupo de terapia com o propósito de oferecer um espaço de acolhimento, troca de experiências e apoio emocional, onde você possa compartilhar seus sentimentos, refletir sobre suas emoções e encontrar novas formas de lidar com os desafios da vida.</p>
             <p className="therapeutic-community-text">Aqui, cada pessoa é acolhida com respeito, empatia e sem julgamentos. Acreditamos que compartilhar experiências, aprender com o outro e desenvolver o autoconhecimento são passos importantes para uma vida com mais equilíbrio, leveza e bem-estar emocional.</p>
-            <p className="therapeutic-community-highlight">✨ Dê o primeiro passo em direção ao seu bem-estar!</p>
+            <p className="therapeutic-community-highlight"><span className="emoji" aria-hidden="true">✨</span> Dê o primeiro passo em direção ao seu bem-estar!</p>
             <p className="therapeutic-community-text">Entre no nosso grupo pelo WhatsApp e faça parte dessa jornada de cuidado, crescimento pessoal e transformação.</p>
 
             <a className="therapeutic-community-button" href="https://chat.whatsapp.com/Kfyvb0Bomh2DsaTgR89JoE?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noreferrer">
