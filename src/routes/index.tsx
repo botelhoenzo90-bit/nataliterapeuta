@@ -185,13 +185,6 @@ function Index() {
         <div className="therapeutic-community-orbit therapeutic-community-orbit-one" aria-hidden="true"></div>
         <div className="therapeutic-community-orbit therapeutic-community-orbit-two" aria-hidden="true"></div>
         <div className="container therapeutic-community-inner">
-          <div className="therapeutic-community-art" aria-hidden="true">
-            <span className="community-spark community-spark-one">✦</span>
-            <span className="community-spark community-spark-two">✧</span>
-            <div className="community-heart"><HeartHandshake size={54} strokeWidth={1.35}/></div>
-            <span className="community-leaf community-leaf-one"></span>
-            <span className="community-leaf community-leaf-two"></span>
-          </div>
           <div className="therapeutic-community-copy">
             <span className="eyebrow">UM ESPAÇO DE ACOLHIMENTO E TROCA</span>
             <h2>Você não precisa caminhar <em>sozinho(a).</em></h2>
