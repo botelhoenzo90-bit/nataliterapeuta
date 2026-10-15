@@ -302,3 +302,32 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
   .whatsapp-choice-dialog { animation: none; }
   .whatsapp-choice-option { transition: none; }
 }
+
+
+/* Centraliza o conteúdo da seção de atendimento no desktop */
+@media (min-width: 761px) {
+  .site .location .location-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .site .location .location-copy {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .site .location .location-copy > .eyebrow,
+  .site .location .location-copy > h2,
+  .site .location .location-copy > p {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .site .location .location-copy > p {
+    max-width: 760px;
+  }
+  .site .location .location-cards {
+    max-width: 100%;
+  }
+  .site .location .location-copy > .site-button {
+    margin-inline: auto;
+  }
+}
