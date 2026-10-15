@@ -1,4 +1,6 @@
 ## Ajustes solicitados
+- [x] Usar o texto enviado na seção "Um espaço de acolhimento e troca" e manter título, parágrafos, botão e linha final centralizados no desktop e no celular.
+
 - [x] Aplicar a logomarca enviada da Natali ao favicon e à imagem de compartilhamento.
 - [x] Clarear os fundos em bege, diferenciar Conhecer o processo, corrigir setas laterais e conferir SEO na prévia e no site publicado.
 - [x] Configurar e verificar SEO local, metadados, dados estruturados e sitemap na prévia.
