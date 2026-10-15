@@ -197,3 +197,108 @@ footer{background:var(--footer-surface);color:var(--footer-text);padding:44px 0 
 /* Logomarca da primeira sessão também no rodapé */
 .site .footer-logo { width: min(165px, 100%); max-height: 100px; object-position: left center; object-fit: contain; margin: 0 0 16px; }
 @media(max-width:700px) { .site .footer-logo { width: 150px; margin-inline: 0; } }
+
+
+/* Seletor de contato do WhatsApp exibido por todos os botões de agendamento */
+.whatsapp-choice-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(27, 38, 31, .58);
+  backdrop-filter: blur(4px);
+}
+.whatsapp-choice-dialog {
+  position: relative;
+  width: min(100%, 430px);
+  padding: 34px 26px 26px;
+  border: 1px solid #e4d9c8;
+  border-radius: 24px;
+  background: #fbf7ef;
+  color: #34433a;
+  box-shadow: 0 24px 80px rgba(20, 35, 26, .24);
+  text-align: center;
+  animation: whatsapp-choice-enter .2s ease-out;
+}
+.whatsapp-choice-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #34433a;
+  font-size: 28px;
+  cursor: pointer;
+}
+.whatsapp-choice-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #e4efe5;
+  color: #315b46;
+}
+.whatsapp-choice-dialog h2 {
+  margin: 0 20px 10px;
+  font-size: clamp(1.35rem, 4vw, 1.7rem);
+  line-height: 1.2;
+}
+.whatsapp-choice-dialog > p {
+  margin: 0 0 22px;
+  color: #6c716a;
+  line-height: 1.55;
+}
+.whatsapp-choice-option {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 70px;
+  margin-top: 10px;
+  padding: 13px 15px;
+  border: 1px solid #d8e4d8;
+  border-radius: 15px;
+  background: #fffdf7;
+  color: #34433a;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.whatsapp-choice-option:hover {
+  border-color: #315b46;
+  background: #f1f7ef;
+  transform: translateY(-1px);
+}
+.whatsapp-choice-option img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.whatsapp-choice-option span {
+  display: grid;
+  gap: 3px;
+  flex: 1;
+  color: #6c716a;
+  font-size: .78rem;
+}
+.whatsapp-choice-option strong {
+  color: #315b46;
+  font-size: 1rem;
+  letter-spacing: .01em;
+}
+.whatsapp-choice-option > svg { color: #315b46; flex: 0 0 auto; }
+@keyframes whatsapp-choice-enter {
+  from { opacity: 0; transform: translateY(8px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-choice-dialog { animation: none; }
+  .whatsapp-choice-option { transition: none; }
+}
