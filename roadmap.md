@@ -1,4 +1,5 @@
 ## Ajustes solicitados
+- [x] Adicionar links clicáveis de Facebook e Instagram na seção "Quem é Natali?" e no rodapé.
 - [x] Usar o texto enviado na seção "Um espaço de acolhimento e troca" e manter título, parágrafos, botão e linha final centralizados no desktop e no celular.
 
 - [x] Aplicar a logomarca enviada da Natali ao favicon e à imagem de compartilhamento.
