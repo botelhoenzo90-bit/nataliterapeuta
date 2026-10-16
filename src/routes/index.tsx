@@ -5,6 +5,7 @@ import {
   Check,
   ChevronDown,
   Clock3,
+  Facebook,
   HeartHandshake,
   Instagram,
   MapPin,
@@ -36,6 +37,9 @@ import aboutPhoto from "@/assets/natali-sobre.png.asset.json";
 
 const siteUrl = "https://nataliterapeuta.lovable.app";
 const shareUrl = new URL(sharePhoto.url, siteUrl).href;
+
+const instagramUrl = "https://www.instagram.com/nataliterapeuta?srtk=MTl4cHE3dGo5b3RlYg==";
+const facebookUrl = "https://www.facebook.com/share/19orre9Akz/?mibextid=wwXIfr";
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -252,6 +256,11 @@ function Index() {
             <p>Mais do que chegar com respostas prontas, você pode encontrar um espaço para conversar sobre sua história, compreender o que está vivendo e conhecer as abordagens disponíveis para o seu momento.</p>
             <div className="about-points"><div><Check size={17}/> Atendimento individual</div><div><Check size={17}/> Online e presencial</div><div><Check size={17}/> Corpo e emoções: um olhar integrado</div></div>
             <Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Quero agendar uma conversa.")}>Agendar conversa <MessageCircle size={18}/></Button>
+            <div className="social-links">
+              <span>Siga Natali nas redes</span>
+              <a className="social-link" href={instagramUrl} target="_blank" rel="noreferrer"><Instagram size={18}/> Instagram</a>
+              <a className="social-link" href={facebookUrl} target="_blank" rel="noreferrer"><Facebook size={18}/> Facebook</a>
+            </div>
           </div>
         </div>
       </section>
@@ -305,7 +314,7 @@ function Index() {
         <div className="container center"><span className="eyebrow">SEU PROCESSO COMEÇA COM UMA CONVERSA</span><h2>Comece com uma conversa e descubra o que faz sentido para <em>você.</em></h2><p>Envie uma mensagem para tirar dúvidas sobre abordagens, modalidades e agendamento.</p><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar meu primeiro atendimento.")}>Agendar atendimento com Natali <ArrowRight size={19}/></Button></div>
       </section>
 
-      <footer><div className="container footer-grid"><div><img className="natali-logo footer-logo" src={logo.url} alt="Logomarca Natali — Psicanalista e Terapeuta" /><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href="#inicio"><Instagram size={16}/> Instagram</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
+      <footer><div className="container footer-grid"><div><img className="natali-logo footer-logo" src={logo.url} alt="Logomarca Natali — Psicanalista e Terapeuta" /><p>Psicanalista<br/>Terapeuta Integrativa Emocional • TCC • TRG Kids</p></div><div><strong>Atendimento</strong><span>Online, presencial e domiciliar</span><span>Consulte horários</span></div><div><strong>Contato</strong><Button variant="siteGold" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")}><MessageCircle size={16}/> WhatsApp</Button><a href={instagramUrl} target="_blank" rel="noreferrer"><Instagram size={16}/> Instagram</a><a href={facebookUrl} target="_blank" rel="noreferrer"><Facebook size={16}/> Facebook</a></div></div><div className="footer-bottom">© {new Date().getFullYear()} Natali. Todos os direitos reservados.</div></footer>
 
       <Button variant="whatsapp" size="site" onClick={() => goWhatsapp("Olá, Natali! Gostaria de agendar um atendimento.")} aria-label="Falar no WhatsApp"><img src={whatsappIcon.url} alt=""/></Button>
 
