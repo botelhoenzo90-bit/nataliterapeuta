@@ -6,7 +6,7 @@
 - [x] Aplicar a logomarca enviada da Natali ao favicon e à imagem de compartilhamento.
 - [x] Clarear os fundos em bege, diferenciar Conhecer o processo, corrigir setas laterais e conferir SEO na prévia e no site publicado.
 - [x] Configurar e verificar SEO local, metadados, dados estruturados e sitemap na prévia.
-- [ ] Concluir verificação do Google Search Console e enviar sitemap — SEO e sitemap já publicados; falta uma propriedade verificada do site no Search Console.
+- [x] Concluir verificação do Google Search Console e enviar sitemap.
 - [x] Aplicar o dourado sem pulsação nos botões e remover a comparação da segunda seção.
 - [x] Colocar fotos da Idalécia, clínica e WhatsApp.
 - [x] Adicionar as imagens disponíveis ao carrossel; manter os demais itens sem fotos até o envio.
